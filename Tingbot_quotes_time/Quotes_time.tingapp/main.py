@@ -21,7 +21,7 @@ state['list_screen_status'] = "list"
 
 intervaltext = ""
 #load quotes
-with open('duke_nukem_quotes.json') as json_data:
+with open('quotes_time.json') as json_data:
     quotes = json.load(json_data)
     #print(quotes)
 temp_quotes = list(quotes)
@@ -32,8 +32,8 @@ intervalposition = 2
 intervals=[0,1,3,5,10,20,30,40,50,60]
 previousintervalposition = 1
 
-state['backgroundcolor'] = helpers.get_random_named_color()
-state['foregroundcolor'] = helpers.get_random_named_color()
+state['backgroundcolor'] = helpers.get_random_named_background_color()
+state['foregroundcolor'] = helpers.get_random_named_foreground_color()
 
 #define 4 menuitems_show
 menuitems_show = ["pause","slower","faster","random"]
@@ -44,11 +44,11 @@ listposition= 0
 
 #functions
 def print_quote(quote):
-    state['backgroundcolor'] = helpers.get_random_named_color()
-    state['foregroundcolor'] = helpers.get_random_named_color()
+    state['backgroundcolor'] = helpers.get_random_named_background_color()
+    state['foregroundcolor'] = helpers.get_random_named_foreground_color()
 
     while state['backgroundcolor'] == state['foregroundcolor']:
-        state['foregroundcolor'] = helpers.get_random_named_color()
+        state['foregroundcolor'] = helpers.get_random_named_foreground_color()
 
     screen.fill(color=state['backgroundcolor'])
     screen.text(quote,color=state['foregroundcolor'],font='GibonBold.otf',font_size=25)
