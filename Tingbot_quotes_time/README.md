@@ -1,7 +1,8 @@
 # Tingbot Quotes Time
-### Tingbot app to show q set of quotes
+### Tingbot app to show a set of quotes
 
 _The quotes are not pulled online, but are in a json file._
+(for now :) )
 
 So you could easily replace that content with your own quotes.
 Just resepect the format of the file. 
